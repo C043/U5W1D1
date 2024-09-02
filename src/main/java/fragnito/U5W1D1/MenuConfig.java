@@ -30,31 +30,61 @@ public class MenuConfig {
         return new Topping("Salami", 86, 0.99);
     }
     @Bean
-    public Pizza pizzaMargherita(List<Topping> toppingList){
-        return new Pizza("Pizza Margherita ", 1104, 4.99, new ArrayList<>());
+    public Pizza pizzaMargherita(){
+        List<Topping> margheritaToppings = new ArrayList<>();
+        margheritaToppings.add(tomato());
+        margheritaToppings.add(cheese());
+        return new Pizza("Pizza Margherita (tomato, cheese)", 1104, 4.99, margheritaToppings);
     }
     @Bean
-    public HawaiianPizza hawaiianPizza(Tomato tomato, Cheese cheese, Ham ham, Pineapple pineapple){
-        return new HawaiianPizza("Hawaiian Pizza (tomato, cheese, ham, pineapple)", 1024, 6.49, tomato, cheese, ham, pineapple);
+    public Pizza hawaiianPizza(){
+        List<Topping> hawaiianPizzaToppings = new ArrayList<>();
+        hawaiianPizzaToppings.add(tomato());
+        hawaiianPizzaToppings.add(cheese());
+        hawaiianPizzaToppings.add(ham());
+        hawaiianPizzaToppings.add(pineapple());
+        return new Pizza("Hawaiian Pizza (tomato, cheese, ham, pineapple)", 1024, 6.49, hawaiianPizzaToppings);
     }
     @Bean
-    public SalamiPizza salamiPizza(Tomato tomato, Cheese cheese, Salami salami){
-        return new SalamiPizza("Salami Pizza (tomato, cheese, salami)", 1160, 5.99, tomato, cheese, salami);
+    public Pizza salamiPizza(){
+        List<Topping> salamiPizzaToppings = new ArrayList<>();
+        salamiPizzaToppings.add(tomato());
+        salamiPizzaToppings.add(cheese());
+        salamiPizzaToppings.add(salami());
+        return new Pizza("Salami Pizza (tomato, cheese, salami)", 1160, 5.99, salamiPizzaToppings);
     }
     @Bean
-    public Acqua acqua(){
-        return new Acqua("Water", 0, 1.29, 0.5);
+    public Bevanda acqua(){
+        return new Bevanda("Water", 0, 1.29, 0.5);
     }
     @Bean
-    public Birra birra(){
-        return new Birra("Beer", 355, 5, 0.55);
+    public Bevanda birra(){
+        return new Bevanda("Beer", 355, 5, 0.55);
     }
     @Bean
-    public Vino vino(){
-        return new Vino("Wine", 607, 7.49, 0.75);
+    public Bevanda vino(){
+        return new Bevanda("Wine", 607, 7.49, 0.75);
     }
     @Bean
-    public Menu menu(Pizza pizzaMargherita, HawaiianPizza hawaiianPizza, SalamiPizza salamiPizza, Cheese cheese, Ham ham, Pineapple pineapple, Salami salami, Acqua acqua, Birra birra, Vino vino){
-        return new Menu(pizzaMargherita, hawaiianPizza, salamiPizza, cheese, ham, pineapple, salami, acqua, vino, birra);
+    public Menu menu(){
+        List<Pizza> pizzaList = new ArrayList<>();
+        List<Topping> toppingList = new ArrayList<>();
+        List<Bevanda> bevandaList = new ArrayList<>();
+
+        pizzaList.add(pizzaMargherita());
+        pizzaList.add(hawaiianPizza());
+        pizzaList.add(salamiPizza());
+
+        toppingList.add(tomato());
+        toppingList.add(cheese());
+        toppingList.add(ham());
+        toppingList.add(pineapple());
+        toppingList.add(salami());
+
+        bevandaList.add(acqua());
+        bevandaList.add(birra());
+        bevandaList.add(vino());
+
+        return new Menu(pizzaList, toppingList, bevandaList);
     }
 }
