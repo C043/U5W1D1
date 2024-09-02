@@ -7,11 +7,8 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class Bevanda extends Cibo{
-    private double litri;
-
-    public Bevanda(String nome, int kcal, double prezzo, double litri) {
+public class Ham extends Topping{
+    public Ham(String nome, int kcal, double prezzo) {
         super(nome, kcal, prezzo);
-        this.litri = litri;
     }
 }
