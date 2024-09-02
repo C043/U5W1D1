@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class AppConfig {
+public class MenuConfig {
     @Bean
     public Tomato tomato(){
         return new Tomato("Tomato", 50, 1);

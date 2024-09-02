@@ -10,7 +10,7 @@ public class U5W1D1Application {
 
 	public static void main(String[] args) {
 		SpringApplication.run(U5W1D1Application.class, args);
-		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(MenuConfig.class);
 
 		Menu menu = context.getBean(Menu.class);
 		menu.printMenu();

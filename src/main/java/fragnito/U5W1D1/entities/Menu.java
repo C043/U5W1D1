@@ -33,16 +33,16 @@ public class Menu {
     }
 
     public void printMenu(){
-        System.out.println("Pizzas:");
+        System.out.println("---------------Pizzas:------------------");
         System.out.println(this.pizzaMargherita.getNome() + " KCAL: " + this.pizzaMargherita.getKcal() + " Price: " + this.pizzaMargherita.getPrezzo());
         System.out.println(this.hawaiianPizza.getNome() + " KCAL: " + this.hawaiianPizza.getKcal() + " Price: " + this.hawaiianPizza.getPrezzo());
         System.out.println(this.salamiPizza.getNome() + " KCAL: " + this.salamiPizza.getKcal() + " Price: " + this.salamiPizza.getPrezzo());
-        System.out.println("Toppings:");
+        System.out.println("---------------Toppings:----------------");
         System.out.println(this.cheese.getNome() + " KCAL: " + this.cheese.getKcal() + " Price: " + this.cheese.getPrezzo());
         System.out.println(this.ham.getNome() + " KCAL: " + this.ham.getKcal() + " Price: " + this.ham.getPrezzo());
         System.out.println(this.pineapple.getNome() + " KCAL: " + this.pineapple.getKcal() + " Price: " + this.pineapple.getPrezzo());
         System.out.println(this.salami.getNome() + " KCAL: " + this.salami.getKcal() + " Price: " + this.salami.getPrezzo());
-        System.out.println("Drinks:");
+        System.out.println("---------------Drinks:------------------");
         System.out.println(this.acqua.getNome() + " " + this.acqua.getLitri() + "l KCAL: " + this.acqua.getKcal() + " Price: " + this.acqua.getPrezzo());
         System.out.println(this.birra.getNome() + " " + this.birra.getLitri() + "l KCAL: " + this.birra.getKcal() + " Price: " + this.birra.getPrezzo());
         System.out.println(this.vino.getNome() + " " + this.vino.getLitri() + "l KCAL: " + this.vino.getKcal() + " Price: " + this.vino.getPrezzo());
