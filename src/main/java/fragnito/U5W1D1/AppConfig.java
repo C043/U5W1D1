@@ -32,11 +32,11 @@ public class AppConfig {
     }
     @Bean
     public HawaiianPizza hawaiianPizza(Tomato tomato, Cheese cheese, Ham ham, Pineapple pineapple){
-        return new HawaiianPizza("Hawaiian Pizza", 1024, 6.49, tomato, cheese, ham, pineapple);
+        return new HawaiianPizza("Hawaiian Pizza (tomato, cheese, ham, pineapple)", 1024, 6.49, tomato, cheese, ham, pineapple);
     }
     @Bean
     public SalamiPizza salamiPizza(Tomato tomato, Cheese cheese, Salami salami){
-        return new SalamiPizza("Salami Pizza", 1160, 5.99, tomato, cheese, salami);
+        return new SalamiPizza("Salami Pizza (tomato, cheese, salami)", 1160, 5.99, tomato, cheese, salami);
     }
     @Bean
     public Acqua acqua(){

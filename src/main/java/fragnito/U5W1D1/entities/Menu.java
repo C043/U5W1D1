@@ -34,9 +34,9 @@ public class Menu {
 
     public void printMenu(){
         System.out.println("Pizzas:");
-        System.out.println(this.pizzaMargherita.getNome() + " (tomato, cheese) KCAL: " + this.pizzaMargherita.getKcal() + " Price: " + this.pizzaMargherita.getPrezzo());
-        System.out.println(this.hawaiianPizza.getNome() + " (tomato, cheese, ham, pineapple) KCAL: " + this.hawaiianPizza.getKcal() + " Price: " + this.hawaiianPizza.getPrezzo());
-        System.out.println(this.salamiPizza.getNome() + " (tomato, cheese, salami) KCAL: " + this.salamiPizza.getKcal() + " Price: " + this.salamiPizza.getPrezzo());
+        System.out.println(this.pizzaMargherita.getNome() + " KCAL: " + this.pizzaMargherita.getKcal() + " Price: " + this.pizzaMargherita.getPrezzo());
+        System.out.println(this.hawaiianPizza.getNome() + " KCAL: " + this.hawaiianPizza.getKcal() + " Price: " + this.hawaiianPizza.getPrezzo());
+        System.out.println(this.salamiPizza.getNome() + " KCAL: " + this.salamiPizza.getKcal() + " Price: " + this.salamiPizza.getPrezzo());
         System.out.println("Toppings:");
         System.out.println(this.cheese.getNome() + " KCAL: " + this.cheese.getKcal() + " Price: " + this.cheese.getPrezzo());
         System.out.println(this.ham.getNome() + " KCAL: " + this.ham.getKcal() + " Price: " + this.ham.getPrezzo());
