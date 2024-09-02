@@ -7,7 +7,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public abstract class Topping extends Cibo{
+public class Topping extends Cibo{
     public Topping(String nome, int kcal, double prezzo) {
         super(nome, kcal, prezzo);
     }

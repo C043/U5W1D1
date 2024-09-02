@@ -4,31 +4,34 @@ import fragnito.U5W1D1.entities.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Configuration
 public class MenuConfig {
     @Bean
-    public Tomato tomato(){
-        return new Tomato("Tomato", 50, 1);
+    public Topping tomato(){
+        return new Topping("Tomato", 50, 1);
     }
     @Bean
-    public Cheese cheese(){
-        return new Cheese("Cheese", 50, 0.69);
+    public Topping cheese(){
+        return new Topping("Cheese", 50, 0.69);
     }
     @Bean
-    public Ham ham(){
-        return new Ham("Ham", 120, 0.99);
+    public Topping ham(){
+        return new Topping("Ham", 120, 0.99);
     }
     @Bean
-    public Pineapple pineapple(){
-        return new Pineapple("Pineapple", 24, 0.79);
+    public Topping pineapple(){
+        return new Topping("Pineapple", 24, 0.79);
     }
     @Bean
-    public Salami salami(){
-        return new Salami("Salami", 86, 0.99);
+    public Topping salami(){
+        return new Topping("Salami", 86, 0.99);
     }
     @Bean
-    public PizzaMargherita pizzaMargherita(Tomato tomato, Cheese cheese){
-        return new PizzaMargherita("Pizza Margherita (tomato, cheese)", 1104, 4.99, tomato,  cheese);
+    public Pizza pizzaMargherita(List<Topping> toppingList){
+        return new Pizza("Pizza Margherita ", 1104, 4.99, new ArrayList<>());
     }
     @Bean
     public HawaiianPizza hawaiianPizza(Tomato tomato, Cheese cheese, Ham ham, Pineapple pineapple){
@@ -44,14 +47,14 @@ public class MenuConfig {
     }
     @Bean
     public Birra birra(){
-        return new Birra("Birra", 355, 5, 0.55);
+        return new Birra("Beer", 355, 5, 0.55);
     }
     @Bean
     public Vino vino(){
-        return new Vino("Vino", 607, 7.49, 0.75);
+        return new Vino("Wine", 607, 7.49, 0.75);
     }
     @Bean
-    public Menu menu(PizzaMargherita pizzaMargherita, HawaiianPizza hawaiianPizza, SalamiPizza salamiPizza, Cheese cheese, Ham ham, Pineapple pineapple, Salami salami, Acqua acqua, Birra birra, Vino vino){
+    public Menu menu(Pizza pizzaMargherita, HawaiianPizza hawaiianPizza, SalamiPizza salamiPizza, Cheese cheese, Ham ham, Pineapple pineapple, Salami salami, Acqua acqua, Birra birra, Vino vino){
         return new Menu(pizzaMargherita, hawaiianPizza, salamiPizza, cheese, ham, pineapple, salami, acqua, vino, birra);
     }
 }
